@@ -8,9 +8,9 @@ from plone.portlets.interfaces import IPortletRenderer
 
 from plone.app.portlets.storage import PortletAssignmentMapping
 
-from wildcard.responsiveslider.responsiveslider import responsivesliderportlet
+from wildcard.responsiveslider import responsivesliderportlet
 
-from wildcard.responsiveslider.responsiveslider.tests.base import TestCase
+from wildcard.responsiveslider.tests.base import TestCase
 
 
 class TestPortlet(TestCase):
@@ -21,9 +21,9 @@ class TestPortlet(TestCase):
     def test_portlet_type_registered(self):
         portlet = getUtility(
             IPortletType,
-            name='wildcard.responsiveslider.responsiveslider.responsivesliderportlet')
+            name='wildcard.responsiveslider.responsivesliderportlet')
         self.assertEquals(portlet.addview,
-                          'wildcard.responsiveslider.responsiveslider.responsivesliderportlet')
+                          'wildcard.responsiveslider.responsivesliderportlet')
 
     def test_interfaces(self):
         # TODO: Pass any keyword arguments to the Assignment constructor
@@ -34,7 +34,7 @@ class TestPortlet(TestCase):
     def test_invoke_add_view(self):
         portlet = getUtility(
             IPortletType,
-            name='wildcard.responsiveslider.responsiveslider.responsivesliderportlet')
+            name='wildcard.responsiveslider.responsivesliderportlet')
         mapping = self.portal.restrictedTraverse(
             '++contextportlets++plone.leftcolumn')
         for m in mapping.keys():

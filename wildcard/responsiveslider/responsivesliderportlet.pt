@@ -1,6 +1,5 @@
 <div class="portlet portletresponsivesliderportlet"
-     tal:define="utils context/@@dsactheme_utils;
-                 images python: utils.front_page_images()">
+     tal:define="images python: view.get_images();">
   <nav>
     <a href="#" class="prev"><span>Previous</span></a>
     <a href="#" class="next"><span>Next</span></a>

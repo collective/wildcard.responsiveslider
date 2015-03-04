@@ -18,21 +18,21 @@ def setup_product():
     # Load the ZCML configuration for this package and its dependencies
 
     fiveconfigure.debug_mode = True
-    import wildcard.responsiveslider.responsiveslider
-    zcml.load_config('configure.zcml', wildcard.responsiveslider.responsiveslider)
+    import wildcard.responsiveslider
+    zcml.load_config('configure.zcml', wildcard.responsiveslider)
     fiveconfigure.debug_mode = False
 
     # We need to tell the testing framework that these products
     # should be available. This can't happen until after we have loaded
     # the ZCML.
 
-    ztc.installPackage('wildcard.responsiveslider.responsiveslider')
+    ztc.installPackage('wildcard.responsiveslider')
 
 # The order here is important: We first call the deferred function and then
 # let PloneTestCase install it during Plone site setup
 
 setup_product()
-ptc.setupPloneSite(products=['wildcard.responsiveslider.responsiveslider'])
+ptc.setupPloneSite(products=['wildcard.responsiveslider'])
 
 
 class TestCase(ptc.PloneTestCase):

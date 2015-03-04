@@ -4,7 +4,7 @@
  <!-- Portlet type registrations -->
 
  <portlet
-   addview="wildcard.responsiveslider.responsiveslider.responsivesliderportlet"
+   addview="wildcard.responsiveslider.responsivesliderportlet"
    title="Responsive Slider Portlet"
    description="A full width image slider that scales according to the width of the browser"
    />

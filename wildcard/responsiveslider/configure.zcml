@@ -4,11 +4,12 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="wildcard.responsiveslider.responsiveslider">
+    i18n_domain="wildcard.responsiveslider">
 
     <five:registerPackage package="." initialize=".initialize" />
 
     <include package="plone.browserlayer" />
+    <include package="plone.app.dexterity" />
 
     <genericsetup:registerProfile
        name="default"
@@ -37,7 +38,7 @@
         layer=".interfaces.IResponsiveSliderLayer"
         />
      <plone:portlet
-         name="wildcard.responsiveslider.responsiveslider.responsivesliderportlet"
+         name="wildcard.responsiveslider.responsivesliderportlet"
          interface=".responsivesliderportlet.Iresponsivesliderportlet"
          assignment=".responsivesliderportlet.Assignment"
          view_permission="zope2.View"

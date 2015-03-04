@@ -20,12 +20,13 @@ setup(name='wildcard.responsiveslider',
       url='http://svn.plone.org/svn/collective/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['wildcard', 'wildcard.responsiveslider'],
+      namespace_packages=['wildcard'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'plone.browserlayer'
+          'plone.browserlayer',
+          'plone.app.dexterity'
           # -*- Extra requirements: -*-
       ],
       entry_points="""
@@ -34,4 +35,4 @@ setup(name='wildcard.responsiveslider',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      )
+        )
