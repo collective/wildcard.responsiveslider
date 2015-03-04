@@ -1,0 +1,34 @@
+<div class="portlet portletresponsivesliderportlet"
+     tal:define="utils context/@@dsactheme_utils;
+                 images python: utils.front_page_images()">
+  <nav>
+    <a href="#" class="prev"><span>Previous</span></a>
+    <a href="#" class="next"><span>Next</span></a>
+  </nav>
+  <ul>
+    <tal:im tal:repeat="image images">
+      <li class="current"
+          tal:attributes="class python: repeat['image'].index == 0 and 'current' or '';
+                          style python: repeat['image'].index > 0 and 'display:none' or ''">
+        <div class="slider-image"
+             tal:attributes="style string:background-image: url('${image/absolute_url}/view/++widget++form.widgets.image/@@download')">
+          <div class="content">
+            <h2><a href="${python: image.link_to}" tal:content="image/Title"></a></h2>
+            <a href="${python: image.link_to}" tal:content="structure image/text/output">
+          </a>
+          </div>
+        </div>
+      </li>
+    </tal:im>
+    <li tal:condition="python: not images" class="current">
+      <div class="slider-image">
+        <div class="content">
+        <h2><a href="#">This is where your slider will go</a></h2>
+          <a href="#">
+          <p>If you see this, you will need to add some Slider Images. Also you will need to publish them</p>
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

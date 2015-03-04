@@ -1,0 +1,50 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="wildcard.responsiveslider.responsiveslider">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <include package="plone.browserlayer" />
+
+    <genericsetup:registerProfile
+       name="default"
+       title="Responsive Slider Portlet"
+       directory="profiles/default"
+       description="A full width image slider that scales according to the width of the browser"
+       provides="Products.GenericSetup.interfaces.EXTENSION"
+       />
+
+     <!-- Register the portlet -->
+
+     <!-- If the portlet has no configurable parameters, you can remove
+          the EditForm declaration in responsivesliderportlet.py and delete
+          the 'editview' attribute from this statement.
+       -->
+    <browser:resource
+        name="slider.css"
+        file="browser/slider.css" 
+        permission="zope2.View"
+        layer=".interfaces.IResponsiveSliderLayer"
+        />
+     <browser:resource
+        name="slider.js"
+        file="browser/slider.js" 
+        permission="zope2.View"
+        layer=".interfaces.IResponsiveSliderLayer"
+        />
+     <plone:portlet
+         name="wildcard.responsiveslider.responsiveslider.responsivesliderportlet"
+         interface=".responsivesliderportlet.Iresponsivesliderportlet"
+         assignment=".responsivesliderportlet.Assignment"
+         view_permission="zope2.View"
+         edit_permission="cmf.ManagePortal"
+         renderer=".responsivesliderportlet.Renderer"
+         addview=".responsivesliderportlet.AddForm"
+         editview=".responsivesliderportlet.EditForm"
+         />
+
+</configure>

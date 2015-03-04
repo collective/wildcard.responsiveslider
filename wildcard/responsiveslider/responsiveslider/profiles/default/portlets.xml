@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<portlets>
+
+ <!-- Portlet type registrations -->
+
+ <portlet
+   addview="wildcard.responsiveslider.responsiveslider.responsivesliderportlet"
+   title="Responsive Slider Portlet"
+   description="A full width image slider that scales according to the width of the browser"
+   />
+
+</portlets>
