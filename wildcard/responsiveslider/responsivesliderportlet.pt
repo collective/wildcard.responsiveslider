@@ -4,7 +4,7 @@
     <a href="#" class="prev"><span>Previous</span></a>
     <a href="#" class="next"><span>Next</span></a>
   </nav>
-  <ul>
+  <ul class="slides">
     <tal:im tal:repeat="image images">
       <li class="current"
           tal:attributes="class python: repeat['image'].index == 0 and 'current' or '';

@@ -44,7 +44,7 @@
   font-size: 4em;
   position: relative;
 }
-.portletresponsivesliderportlet ul {
+.portletresponsivesliderportlet ul.slides {
   margin: 0px;
   list-style-type: none;
   z-index: 1;
@@ -86,4 +86,25 @@
   width: 50%;
   margin-left: 6rem;
   font-size: 1.3em;
+}
+
+.portletresponsivesliderportlet .dots{
+  height: 15px;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+.portletresponsivesliderportlet .dots li {
+  padding: 0 5px;
+}
+.portletresponsivesliderportlet .dots li a{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #DDD;
+  display:inline-block;
+}
+.portletresponsivesliderportlet .dots li a:hover,
+.portletresponsivesliderportlet .dots li.current a{
+  background-color: #CCC;
 }
