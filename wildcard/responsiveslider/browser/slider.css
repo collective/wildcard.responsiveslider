@@ -2,6 +2,7 @@
   list-style-type: none;
   z-index: 0;
   position: relative;
+  margin-bottom: 15px;
 }
 .portletresponsivesliderportlet a:hover {
   text-decoration: none;
@@ -92,10 +93,13 @@
   height: 15px;
   margin: 0;
   padding: 0;
-  text-align: right;
+  float: right;
+  list-style-type: none;
 }
 .portletresponsivesliderportlet .dots li {
   padding: 0 5px;
+  float: left;
+  list-style-type: none;
 }
 .portletresponsivesliderportlet .dots li a{
   width: 15px;
