@@ -44,7 +44,8 @@ class Renderer(base.Renderer):
     def get_images(self):
         catalog = getToolByName(self.context, 'portal_catalog')
         return [b.getObject() for b in catalog(portal_type='slider_image',
-                                               review_state='published')]
+                                               review_state='published',
+                                               sort_on='getObjPositionInParent')]
 
 
 class AddForm(base.NullAddForm):

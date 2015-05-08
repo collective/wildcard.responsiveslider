@@ -26,7 +26,8 @@ setup(name='wildcard.responsiveslider',
       install_requires=[
           'setuptools',
           'plone.browserlayer',
-          'plone.app.dexterity'
+          'plone.app.dexterity',
+          'five.pt'
           # -*- Extra requirements: -*-
       ],
       entry_points="""
